@@ -33,8 +33,9 @@ jobs:
         git add .
         git commit -m "Update XML files"
     
-    - name: Push changes
-      uses: ad-m/github-push-action@v1.0.0
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: "Update XML files"
         branch: main
+        file_pattern: '*.xml'
