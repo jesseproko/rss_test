@@ -3,6 +3,7 @@ name: Scrape and Update XML
 on:
   schedule:
     - cron: "*/30 * * * *"  # This cron expression schedules the job to run every 30 minutes
+  workflow_dispatch:  # This enables the manual trigger
 
 jobs:
   update-xml:
